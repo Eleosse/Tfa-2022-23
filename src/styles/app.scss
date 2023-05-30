@@ -40,6 +40,10 @@ body{
     color: #00FFC2;
     font-family: 'Jost', sans-serif;
 }
+.link--normal{
+    color: #00FFC2;
+    text-decoration: none;
+}
 
 .title__section{
     margin-top: 17%;
@@ -109,7 +113,6 @@ body{
         font-family: 'Varela Round', sans-serif;
         font-size: 24px;
         margin: 0;
-        margin-bottom: 5%;
         color: #00FFC2;
     }
     .icone__user{
@@ -117,6 +120,7 @@ body{
         height: 300px;
         grid-row-start: 2;
         margin: auto;
+        cursor: pointer;
     }
     .icone__user1{
         padding-top: 14px;
@@ -127,7 +131,50 @@ body{
         display: flex;
         justify-content: flex-end;
         margin-right: 30%;
-       font-size: 20px;
+        font-size: 20px;
+    }
+    .icone__user1{
+        grid-row: 2;
+        grid-column: 1; 
+    }
+    .p__prof{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .icone__user2{
+        grid-row: 2;
+        grid-column: 2; 
+    }
+    .p__joue{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .icone__user3{
+        grid-row: 2;
+        grid-column: 3; 
+    }
+    .p__arti{
+        grid-row: 2;
+        grid-column: 3;
+    }
+    .icone__user--p{
+        display: flex;
+        align-items: center;
+        margin: 44px;
+        margin-top: 11px;
+        padding: 22px;
+        border-radius: 20px;
+        opacity: 0;
+        z-index: -10;
+        background-color: rgba(4, 11, 34, 0.300);
+    }
+    .p__toggle{
+        opacity: 1;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .blurr__icone{
+        filter: blur(4px);
     }
 }
 
@@ -153,6 +200,7 @@ body{
         grid-column-start: 4;
         display: grid;
         grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+        margin-top: 5%;
         .icone__rencontre{
             grid-row: 1;
             margin: auto;
@@ -181,7 +229,7 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 5fr 1fr;
-    margin-top: 20%;
+    margin-top: 15%;
     .prob__title{
         grid-column: 2 / 4;
     }
