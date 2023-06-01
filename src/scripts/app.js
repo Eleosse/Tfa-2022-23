@@ -68,3 +68,22 @@ window.addEventListener('scroll', function() {
       }
     }
   });
+
+
+var cadreUser = document.querySelector(".legende__user");
+cadreUser.addEventListener("click", afficherCadre);
+  
+function afficherCadre() {
+    document.getElementById('cadre-info').style.display = 'block';
+    document.getElementById('cadre-info').style.animation = 'fade-in 0.3s forwards';
+
+}
+
+var croixUser =  document.getElementById('croix');
+croixUser.addEventListener('click', masquerCadre);
+
+function masquerCadre() {
+    document.getElementById('cadre-info').style.display = 'none';
+    document.getElementById('cadre-info').style.animation = 'fade-out 0.3s forwards';
+
+  }
