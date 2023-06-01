@@ -53,3 +53,18 @@ function text_supr3(){
     ptoggleArti.classList.remove('p__toggle');
     iconeUser3.classList.remove('blurr__icone');
 }
+
+window.addEventListener('scroll', function() {
+    var menuLinks = document.querySelectorAll('.nav__link');
+  
+    for (var i = 0; i < menuLinks.length; i++) {
+      var section = document.getElementById('section' + (i + 1));
+      var rect = section.getBoundingClientRect();
+  
+      if (rect.top >= 0 && rect.top <= window.innerHeight) {
+        menuLinks[i].classList.add('active');
+      } else {
+        menuLinks[i].classList.remove('active');
+      }
+    }
+  });
