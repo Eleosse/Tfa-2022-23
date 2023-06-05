@@ -74,16 +74,34 @@ var cadreUser = document.querySelector(".legende__user");
 cadreUser.addEventListener("click", afficherCadre);
   
 function afficherCadre() {
-    document.getElementById('cadre-info').style.display = 'block';
-    document.getElementById('cadre-info').style.animation = 'fade-in 0.3s forwards';
+    document.getElementById('cadre-user').style.display = 'block';
+    document.getElementById('cadre-user').style.animation = 'fade-in 0.3s forwards';
 
 }
 
-var croixUser =  document.getElementById('croix');
+var croixUser =  document.getElementById('croix-user');
 croixUser.addEventListener('click', masquerCadre);
 
 function masquerCadre() {
-    document.getElementById('cadre-info').style.display = 'none';
-    document.getElementById('cadre-info').style.animation = 'fade-out 0.3s forwards';
+    document.getElementById('cadre-user').style.display = 'none';
+    document.getElementById('cadre-user').style.animation = 'fade-out 0.3s forwards';
+
+  }
+
+var cadreRenc = document.querySelector(".legende__renc");
+cadreRenc.addEventListener("click", afficherCadreR);
+  
+function afficherCadreR() {
+    document.getElementById('cadre-renc').style.display = 'block';
+    document.getElementById('cadre-renc').style.animation = 'fade-in 0.3s forwards';
+
+}
+
+var croixRenc =  document.getElementById('croix-renc');
+croixRenc.addEventListener('click', masquerCadreR);
+
+function masquerCadreR() {
+    document.getElementById('cadre-renc').style.display = 'none';
+    document.getElementById('cadre-renc').style.animation = 'fade-out 0.3s forwards';
 
   }
