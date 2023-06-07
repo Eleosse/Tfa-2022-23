@@ -74,8 +74,10 @@ window.addEventListener('scroll', function() {
 
  /* user btn */
 var cadreUser = document.querySelector(".legende__user");
-cadreUser.addEventListener("click", afficherCadre);
-  
+if(cadreUser){
+    cadreUser.addEventListener("click", afficherCadre);
+}
+
 function afficherCadre() {
     document.getElementById('cadre-user').style.display = 'block';
     document.getElementById('cadre-user').style.animation = 'fade-in 0.3s forwards';
@@ -83,7 +85,9 @@ function afficherCadre() {
 }
 
 var croixUser =  document.getElementById('croix-user');
-croixUser.addEventListener('click', masquerCadre);
+if(croixUser){
+    croixUser.addEventListener('click', masquerCadre);
+}
 
 function masquerCadre() {
     document.getElementById('cadre-user').style.display = 'none';
@@ -92,7 +96,10 @@ function masquerCadre() {
   }
 /* renc btn */
 var cadreRenc = document.querySelector(".legende__renc");
-cadreRenc.addEventListener("click", afficherCadreR);
+if(cadreRenc){
+    cadreRenc.addEventListener("click", afficherCadreR);
+}
+
   
 function afficherCadreR() {
     document.getElementById('cadre-renc').style.display = 'block';
@@ -101,7 +108,9 @@ function afficherCadreR() {
 }
 
 var croixRenc =  document.getElementById('croix-renc');
-croixRenc.addEventListener('click', masquerCadreR);
+if(croixRenc){
+    croixRenc.addEventListener('click', masquerCadreR);
+}
 
 function masquerCadreR() {
     document.getElementById('cadre-renc').style.display = 'none';
@@ -115,7 +124,9 @@ var blurrHypo2 = document.querySelector('.hypo__para--2')
 var blurrHypo3 = document.querySelector('.hypo__para--3')
 /* hypo1 btn */
 var cadreH1 = document.querySelector(".hypo__link--1");
-cadreH1.addEventListener("click", afficherCadreH1);
+if(cadreH1){
+    cadreH1.addEventListener("click", afficherCadreH1);
+}
   
 function afficherCadreH1() {
     document.getElementById('cadre-h1').style.display = 'block';
@@ -126,7 +137,9 @@ function afficherCadreH1() {
 }
 
 var croixH1 =  document.getElementById('croix-h1');
-croixH1.addEventListener('click', masquerCadreH1);
+if(croixH1){
+    croixH1.addEventListener('click', masquerCadreH1);
+}
 
 function masquerCadreH1() {
     document.getElementById('cadre-h1').style.display = 'none';
@@ -138,7 +151,9 @@ function masquerCadreH1() {
 
 /* hypo2 btn */
 var cadreH2 = document.querySelector(".hypo__link--2");
-cadreH2.addEventListener("click", afficherCadreH2);
+if(cadreH2){
+    cadreH2.addEventListener("click", afficherCadreH2);
+}
   
 function afficherCadreH2() {
     document.getElementById('cadre-h2').style.display = 'block';
@@ -149,7 +164,10 @@ function afficherCadreH2() {
 }
 
 var croixH2 =  document.getElementById('croix-h2');
-croixH2.addEventListener('click', masquerCadreH2);
+if(croixH2){
+    croixH2.addEventListener('click', masquerCadreH2);
+}
+
 
 function masquerCadreH2() {
     document.getElementById('cadre-h2').style.display = 'none';
@@ -161,7 +179,9 @@ function masquerCadreH2() {
 
 /* hypo3 btn */
 var cadreH3 = document.querySelector(".hypo__link--3");
-cadreH3.addEventListener("click", afficherCadreH3);
+if(cadreH3){
+    cadreH3.addEventListener("click", afficherCadreH3);
+}
   
 function afficherCadreH3() {
     document.getElementById('cadre-h3').style.display = 'block';
@@ -172,7 +192,9 @@ function afficherCadreH3() {
 }
 
 var croixH3 =  document.getElementById('croix-h3');
-croixH3.addEventListener('click', masquerCadreH3);
+if(croixH3){
+    croixH3.addEventListener('click', masquerCadreH3);
+}
 
 function masquerCadreH3() {
     document.getElementById('cadre-h3').style.display = 'none';
@@ -198,8 +220,34 @@ paragraphs.forEach((element) => {
             start: 'top 80%', 
             end: 'bottom 20%', 
             toggleClass: 'active', 
-            
         }
     });
+});
+
+
+/* icone rencontre */
+const images = gsap.utils.toArray('.icone__rencontre');
+const timeline = gsap.timeline({ paused: true });
+
+images.forEach((image, index) => {
+  timeline.fromTo(image, { x: '-100%', opacity: 0 }, { x: '0%', opacity: 1, duration: 1 }, index * 0.2);
+});
+
+
+const startAnimation = () => {
+  if (!timeline.isActive()) {
+    timeline.restart();
+  }
+};
+
+
+gsap.registerPlugin(ScrollTrigger);
+images.forEach((image) => {
+  ScrollTrigger.create({
+    trigger: image,
+    start: 'top 80%', 
+    onEnter: startAnimation,
+    once: true 
+  });
 });
 
