@@ -250,4 +250,3 @@ images.forEach((image) => {
     once: true 
   });
 });
-
