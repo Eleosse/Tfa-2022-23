@@ -2,12 +2,15 @@
 @import 'components/type';
 
 body{
-    background-image: url(../assets/images/bg.svg);
+    background-image: url(../assets/images/bg-pc.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #040B22;
     margin: 0;
     line-height: 1.4;
+}
+.logo__desc{
+    display: none;
 }
 .paragraphe{
     color: white;
@@ -825,6 +828,7 @@ body{
 }
 @media (min-width: 360px) and (max-width: 763px){
     body{
+        background-image: url(../assets/images/bg-mob.svg);
         line-height: 1.2;
     }
     .list__uikit{
