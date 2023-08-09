@@ -9,9 +9,6 @@ body{
     margin: 0;
     line-height: 1.4;
 }
-.logo__desc{
-    display: none;
-}
 .paragraphe{
     color: white;
     font-family: 'Jost', sans-serif;
@@ -828,8 +825,8 @@ body{
 }
 @media (min-width: 360px) and (max-width: 763px){
     body{
-        background-image: url(../assets/images/bg-mob.svg);
         line-height: 1.2;
+        background-image: url(../assets/images/bg-mob.svg);
     }
     .list__uikit{
         .uikit__desc--lh::after{
