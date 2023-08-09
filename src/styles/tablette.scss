@@ -1,0 +1,197 @@
+@import 'utils/variables';
+@import 'components/type';
+
+@media (min-width: 763px) and (max-width: 1150px){
+    body{
+        line-height: 1.2;
+    }
+    .list__uikit{
+        grid-column: 3;
+    }
+    .list__police{
+        grid-row: 2;
+        grid-column: 3 / 5;
+    }
+    .title__section{
+        margin-top: 23%;
+        .title--big{
+            font-size: 56px;
+            height: 100%;
+        }
+    }
+    .logo-tc{
+        width: 64px;
+        height: 64px;
+        z-index: 100;
+    }
+    .paragraphe{
+        font-size: 18px;
+    }
+    .title--normal{
+        font-size: 27px;
+    }
+    .title--sub{
+        font-size: 23px;
+    }
+    .legende{
+        font-size: 16px;
+    }
+    .section__contexte{
+        display: grid;
+        grid-template-columns: 1fr 1fr 5fr 1fr;
+        margin-top: 20%;
+        .contexte__title{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--1{
+            grid-column: 3;
+            grid-row: 2;
+            margin-top: 18px;
+        }
+        .contexte__para--2{
+            grid-column:3;
+            grid-row: 3;
+        }
+    }
+    .icone__user--position{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        .icone__user1{
+            padding-top: 14px;
+        }
+        .legende__user{ 
+            grid-column: 2;
+            grid-row: 4;
+        }
+        .icone__user1{
+            grid-row: 2;
+            grid-column: 1; 
+        }
+        .p__prof{
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .title__prof{
+            grid-row: 1;
+            grid-column: 1;
+        }
+        .title__joue{
+            grid-row: 1;
+            grid-column: 2;
+        }
+        .icone__user2{
+            grid-row: 2;
+            grid-column: 2; 
+        }
+        .p__joue{
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .icone__user3{
+            grid-row: 4;
+            grid-column: 1; 
+        }
+        .p__arti{
+            grid-row: 4;
+            grid-column: 1;
+        }
+        .title__arti{
+            margin-top: 3%;
+            grid-row: 3;
+            grid-column: 1;
+        }
+        .icone__user--p{
+            margin: 5px;
+        }
+    }
+    .section__rencontre{
+        display: grid;
+        grid-template-columns: 1fr 1fr 5fr 1fr;
+        .rencontre__para--1{
+            grid-column: 3;
+            grid-row: 2;
+            margin-top: 3%;
+        }
+        .rencontre__para--2{
+            grid-column: 3;
+            grid-row: 3;
+        }
+        .icone__rencontre--position{
+            grid-row: 4;
+            grid-column: 3;
+        }
+        .legende__renc{
+            grid-row: 5;
+            grid-column: 3;
+        }
+        .title__iconeR{
+            font-size: 16px;
+        }
+    }
+    .section__prob{
+        display: grid;
+        grid-template-columns: 1fr 1fr 5fr 1fr;
+        .prob__para--1{
+            grid-column: 3;
+            margin-top: 3%;
+        }
+        .prob__para--2{
+            grid-column: 3;
+        }
+    }
+    .section__hypo{
+        .hypo__para--position{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+            margin-left: 25px;
+            margin-right: 25px;
+            .hypo__para--2{
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .hypo__link--2{
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .hypo__para--3{
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .hypo__link--3{
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+    }
+    .section__solu{
+        .solu__para--1{
+            grid-column: 3 / 5;
+            background-color: rgba(4, 11, 34, 0.800);
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin: 0;
+            margin-top: 15%;
+        }
+        .solu__para--2{
+            grid-column: 3 / 5;
+            background-color: rgba(4, 11, 34, 0.800);
+            margin: 0;
+            padding-left: 4%;
+            padding-right: 4%;
+        }
+        .solu__para--3{
+            grid-column: 3 / 5;
+            background-color: rgba(4, 11, 34, 0.800);
+            padding-bottom: 5%;
+            padding-top: 5%;
+            margin: 0;
+            padding-left: 4%;
+            padding-right: 4%;
+        }
+    } 
+}
