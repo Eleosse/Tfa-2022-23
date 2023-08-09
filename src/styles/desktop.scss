@@ -1,0 +1,47 @@
+@import 'utils/variables';
+@import 'components/type';
+
+@media (min-width: 1900px){
+    .paragraphe{
+        font-size: 26px;
+        line-height: 1.6;
+    }
+    .list__police{
+        .link__police{
+            font-size: 26px;
+            line-height: 1.6;
+        }
+    }
+    .list__uikit{
+        .el__uikit{
+            font-size: 26px;
+            line-height: 1.6;
+        }
+    }
+    .title--normal{
+        font-size: 35px;
+    }
+    .title--sub{
+        font-size: 31px;
+    }
+    .legende{
+        font-size: 24px;
+    }
+    .list__uikit{
+        .uikit__desc--lh::after{
+            content: ' 1.6';
+        }
+        .uikit__desc--h2::after{
+            content: ' 35px';
+        }
+        .uikit__desc--h3::after{
+            content: ' 31px';
+        }
+        .uikit__desc--p::after{
+            content: ' 26px';
+        }
+        .uikit__desc--leg::after{
+            content: ' 24px';
+        }
+    }
+}
