@@ -12,6 +12,7 @@ body{
 .logo__desc{
     display: none;
 }
+
 .paragraphe{
     color: white;
     font-family: 'Jost', sans-serif;
@@ -130,6 +131,19 @@ body{
         }
     }
 }
+.home__button{
+    grid-row: 6;
+    grid-column: 4;
+    &--position{
+        fill: #00FFC2;
+        grid-row: 6;
+        width: 80px;
+        height: 80px;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin-top: 10%;
+    }
+}
   
 .title__section{
     margin-top: 17%;
@@ -165,23 +179,34 @@ body{
     }
     .contexte__para--1{
         grid-column-start: 4;
-        font-weight: 300;
         margin: 0;
     }
     .contexte__para--2{
         margin-top: 20px;
         grid-column-start: 4;
     }
+    .contexte__para--3{
+        margin-top: 20px;
+        grid-column-start: 4;
+    }
+    .contexte__para--4{
+        margin-top: 20px;
+        grid-column-start: 4;
+    }
+    .contexte__para--5{
+        margin-top: 20px;
+        grid-column-start: 4;
+    }
 }
 
 .section__user{
-    margin-top: 7%;
-    .user__title--position{
+    margin-top: 21%;
+    .user__title{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr 5fr 1fr;
         background-color: rgba(4, 11, 34, 0.500);
         height: 160px;
-        .user__title{
+        &--position{
             grid-column: 2 / -1;
             width: 100%;
             display: flex;
@@ -192,8 +217,8 @@ body{
 .icone__user--position{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     .title__iconeU{
         grid-row-start: 1;
         display: flex;
@@ -201,35 +226,48 @@ body{
         font-family: 'Varela Round', sans-serif;
         font-size: 24px;
         margin: 0;
-        color: #00FFC2;
+        color: white;
     }
     .icone__user{
         width: 200px;
-        height: 300px;
-        grid-row-start: 2;
+        height: 250px;
         margin: auto;
-        cursor: pointer;
+        margin-top: 3%;
+        grid-row-start: 2;
     }
-    .icone__user:hover{
-        opacity: 0.3;
-        transform: scale(1.2);
-    }
-    .icone__user1{
-        padding-top: 14px;
-    }
+
     .legende__user{ 
+        &::before{
+            content: var(--arrow-content, "→ ");
+        }
         grid-column: 3;
-        margin-top: 20%;
         display: flex;
         justify-content: flex-end;
         margin-right: 30%;
+        &--grid{
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 5fr 1fr;
+            margin-top: 3%;
+            .p__cadreU--1{
+                grid-column: 4;
+                font-weight: 300;
+            }
+            .p__cadreU--2{
+                grid-column: 4;
+                font-weight: 300;
+            }
+        }
+    }
+    .p__toggle{
+        opacity: 0;
     }
     .icone__user1{
         grid-row: 2;
         grid-column: 1; 
     }
     .p__prof{
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 1;
     }
     .icone__user2{
@@ -237,7 +275,7 @@ body{
         grid-column: 2; 
     }
     .p__joue{
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 2;
     }
     .icone__user3{
@@ -245,28 +283,16 @@ body{
         grid-column: 3; 
     }
     .p__arti{
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 3;
     }
     .icone__user--p{
+        font-size: 18px;
         display: flex;
-        align-items: center;
-        margin: 44px;
-        margin-top: 11px;
-        padding: 22px;
-        border-radius: 20px;
-        opacity: 0;
-        z-index: -10;
-        background-color: rgba(4, 11, 34, 0.300);
+        margin: 7%;
+        margin-top: 5%;
     }
-    .p__toggle{
-        opacity: 1;
-        z-index: 10;
-        cursor: pointer;
-    }
-    .blurr__icone{
-        filter: blur(4px);
-    }
+
 }
 
 
@@ -309,7 +335,7 @@ body{
         .title__iconeR{
             display: flex;
             justify-content: center;
-            color: #00FFC2;
+            color: white;
             font-family: 'Jost', sans-serif;
         }
         .title__iconeR--1{
@@ -527,9 +553,6 @@ body{
         grid-column: 4;
         grid-row: 4;
     }
-}
-#cadre-user{
-    display: none;
 }
 #cadre-renc{
     display: none;
