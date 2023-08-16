@@ -12,7 +12,12 @@ body{
 .logo__desc{
     display: none;
 }
-
+.legende__hypo{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
 .paragraphe{
     color: white;
     font-family: 'Jost', sans-serif;
@@ -99,7 +104,7 @@ body{
     fill: #00FFC2;
     top: 30px;
     right: 50px;
-    z-index: 500;
+    z-index: 50000;
 }
 .logo-tc:hover{
     opacity: 0.5;
@@ -230,7 +235,7 @@ body{
 .icone__user--position{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
     .title__iconeU{
         grid-row-start: 1;
@@ -630,14 +635,14 @@ body{
     grid-column: 4;
     margin-top: 0;
     padding-left: 0px;
-    .link__police{
+    &{
         color:white;
         text-decoration: none;
         font-family: 'Jost', sans-serif;
         font-size: 20px;
         font-weight: 700;
     }
-    .link__police:hover{
+    &:hover{
         opacity: 0.5;
     }
 }
@@ -786,12 +791,103 @@ body{
         }
     }
     .menu-nav{
-        padding-right: 10px;
-        .nav__el--position{
-            .nav__link{
-                font-size: 28px;
-            }
+        display: none;
+    }
+    .burger-menu{
+        display: block;
+        position: relative;
+        .menu__burger{
+          cursor: pointer;
+          position: fixed;
+          top: 200px;
+          right: 0;
+          z-index: 1500;
+          &--icon{
+            width: 65px;
+            height: 65px;
+            fill: #00FFC2;
+          }
+          &--txt{
+            transform: rotate(-90deg);
+            display: flex;
+            justify-content: flex-end;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: 'Jost', sans-serif;
+          }
         }
+        .menu__liste{
+          position: fixed;
+          z-index: 1000;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.650);
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in-out;
+          list-style: none;
+          padding: 0;
+          margin-top: 0;
+          &--link{
+            display: block;
+            padding: 1rem;
+            margin-top: 10%;
+            text-align: center;
+            color:white;
+            text-decoration: none;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.05rem;
+            font-size: 1.5rem;
+          }
+          &--link1{
+            margin-top: 60%;
+            &::before{
+                content: 'C';
+                color: #00FFC2;
+                font-family: 'Jost', sans-serif;
+            }
+          }
+          &--link2::before{
+            content: 'U';
+            color: #00FFC2;
+            font-family: 'Jost', sans-serif;
+          }
+          &--link3::before{
+            content: 'R';
+            color: #00FFC2;
+            font-family: 'Jost', sans-serif;
+          }
+          &--link4::before{
+            content: 'P';
+            color: #00FFC2;
+            font-family: 'Jost', sans-serif;
+          }
+          &--link5::before{
+            content: 'H';
+            color: #00FFC2;
+            font-family: 'Jost', sans-serif;
+          }
+          &--link6::before{
+            content: 'S';
+            color: #00FFC2;
+            font-family: 'Jost', sans-serif;
+          }
+
+        }
+        &.menu-open{
+          .menu__liste{
+            transform: translateX(0);
+          }
+          .menu__burger{
+            transform: rotate(90deg);
+            top: 15%;
+            right: 10%;
+          }
+        }
+      }
+    .blurr__effect{
+        filter: blur(7px);
     }
     .title__section{
         margin-top: 50%;
@@ -806,7 +902,7 @@ body{
     .logo-tc{
         width: 64px;
         height: 64px;
-        z-index: 100;
+        z-index: 50000;
         top: 13px;
         right: 12px;
     }
@@ -830,68 +926,69 @@ body{
             grid-column: 2 / 4;
         }
         .contexte__para--1{
-            grid-column: 3;
+            grid-column: 2 / 4;
             grid-row: 2;
             margin-top: 18px;
         }
         .contexte__para--2{
-            grid-column:3;
-            grid-row: 3;
+            grid-column: 2 / 4;
+        }
+        .contexte__para--3{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--4{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--5{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--6{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--7{
+            grid-column: 2 / 4;
+        }
+        .contexte__para--8{
+            grid-column: 2 / 4;
+        }
+        .home__button{
+            grid-column: 2 / 4;
+            &--position{
+                width: 54px;
+                height: 54px;
+                margin-left: 45%;
+            }
         }
     }
     .icone__user--position{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         margin-top: 15%;
         margin-bottom: 15%;
+        .icone__user{
+            height: 150px;
+        }
         .icone__user1{
             padding-top: 14px;
-        }
-        .legende__user{ 
-            grid-column: 2;
-            grid-row: 4;
-        }
-        .icone__user1{
-            grid-row: 2;
-            grid-column: 1; 
-        }
-        .p__prof{
-            grid-row: 2;
-            grid-column: 1;
         }
         .title__prof{
             grid-row: 1;
             grid-column: 1;
         }
-        .title__joue{
-            grid-row: 1;
-            grid-column: 2;
-        }
-        .icone__user2{
-            grid-row: 2;
-            grid-column: 2; 
-        }
-        .p__joue{
-            grid-row: 2;
-            grid-column: 2;
-        }
-        .icone__user3{
-            grid-row: 4;
-            grid-column: 1; 
-        }
-        .p__arti{
-            grid-row: 4;
-            grid-column: 1;
-        }
-        .title__arti{
-            margin-top: 3%;
-            grid-row: 3;
-            grid-column: 1;
-        }
         .icone__user--p{
-            margin: 5px;
+            margin: 1fr;
+            margin-top: 5px;
+        }
+        .legende__user--grid{
+            .p__cadreU--1{
+                grid-column: 3/5;
+            }
+            .p__cadreU--2{
+                grid-column: 3/5;
+            }
         }
     }
+
     .section__rencontre{
         display: grid;
         grid-template-columns: 1fr 5fr 1fr 1fr;
@@ -955,6 +1052,14 @@ body{
                 grid-row: 3;
             }
         }
+    }
+    .legende__hypo{
+        grid-column: 2/5;
+        grid-row: 2;
+        display: block;
+        font-family: "Jost", sans-serif;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 16px;    
     }
     .just__para--position{
         .just__subtitle{
@@ -1056,60 +1161,52 @@ body{
         }
         .contexte__para--2{
             grid-column:3;
-            grid-row: 3;
+        }
+        .contexte__para--3{
+            grid-column:3;
+        }
+        .contexte__para--4{
+            grid-column:3;
+        }
+        .contexte__para--5{
+            grid-column:3;
+        }
+        .contexte__para--6{
+            grid-column:3;
+        }
+        .contexte__para--7{
+            grid-column:3;
+        }
+        .contexte__para--8{
+            grid-column:3;
+        }
+        .home__button{
+            grid-column: 3;
         }
     }
     .icone__user--position{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         margin-top: 15%;
+        margin-left: 15%;
         margin-bottom: 15%;
         .icone__user1{
             padding-top: 14px;
         }
-        .legende__user{ 
-            grid-column: 2;
-            grid-row: 4;
+        .icone__user{
+            height: 175px;
         }
-        .icone__user1{
-            grid-row: 2;
-            grid-column: 1; 
-        }
-        .p__prof{
-            grid-row: 2;
-            grid-column: 1;
-        }
-        .title__prof{
-            grid-row: 1;
-            grid-column: 1;
-        }
-        .title__joue{
-            grid-row: 1;
-            grid-column: 2;
-        }
-        .icone__user2{
-            grid-row: 2;
-            grid-column: 2; 
-        }
-        .p__joue{
-            grid-row: 2;
-            grid-column: 2;
-        }
-        .icone__user3{
-            grid-row: 4;
-            grid-column: 1; 
-        }
-        .p__arti{
-            grid-row: 4;
-            grid-column: 1;
-        }
-        .title__arti{
-            margin-top: 3%;
-            grid-row: 3;
-            grid-column: 1;
+        .title__iconeU{
+            margin-top: 5%;
         }
         .icone__user--p{
             margin: 5px;
+            margin-left: 17%;
+            margin-right: 17%;
+        }
+        .legende__user{
+            margin-top: 5%;
+            margin-right: 15%;
         }
     }
     .section__rencontre{
@@ -1170,6 +1267,14 @@ body{
                 grid-column: 1;
                 grid-row: 2;
             }
+        }
+        .legende__hypo{
+            grid-column: 2/5;
+            grid-row: 2;
+            display: block;
+            font-family: "Jost", sans-serif;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 16px;    
         }
     }
     .section__solu{

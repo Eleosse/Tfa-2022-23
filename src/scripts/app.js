@@ -87,3 +87,14 @@ images.forEach((image) => {
     once: true 
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const blurr = document.querySelector('main');
+  const burgerMenu = document.querySelector('.burger-menu');
+  const burgerButton = document.querySelector('.menu__burger');
+  
+  burgerButton.addEventListener('click', function() {
+    burgerMenu.classList.toggle('menu-open');
+    blurr.classList.toggle('blurr__effect');
+  });
+});
