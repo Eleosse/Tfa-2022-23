@@ -1,10 +1,42 @@
-body {
-  font-family: sans-serif;
-  font-size: $size-text;
-  line-height: 1.5;
+.paragraphe{
   color: $c-text;
+  font-family: $font-para;
+  font-size: $size-text-pc;
 }
-
-.title {
-  color: $c-alt;
+.title--normal{
+  font-family: $font-title;
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+  color: $c-main;
+}
+.title--sub{
+  font-family: $font-title;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  color: $c-main;
+}
+.para--bold{
+  font-weight: 700;
+}
+.legende{
+  color: $c-main;
+  font-family: $font-para;
+  cursor: pointer;
+  font-size: 18px;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+.link--normal{
+  color: $c-main;
+  text-decoration: none;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+.nbr__section{
+  font-size: 23px;
+  color: rgba(0, 255, 195, 0.400);
 }
