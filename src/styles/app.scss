@@ -564,6 +564,7 @@ body{
 }
 .police__desc{
     color: $c-text;
+    font-family: $font-para;
 }
 .list__police{
     list-style: circle;
@@ -571,15 +572,15 @@ body{
     grid-column: 4;
     margin-top: 0;
     padding-left: 0px;
-    &{
+    .link__police{
         color:$c-text;
         text-decoration: none;
-        font-family: 'Jost', sans-serif;
+        font-family: $font-para;
         font-size: 20px;
         font-weight: 700;
-    }
-    &:hover{
-        opacity: 0.5;
+        &:hover{
+            opacity: 0.5;
+        }
     }
 }
 .list__uikit{
